@@ -78,11 +78,37 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Button">
-            <Button onPress={handleIncrement} title="Increment +" />
-            <Button onPress={handleDecrement} title="Decrement -" />
-            <Text>{number}</Text>
-          </Section>
+          <View
+            style={{
+              backgroundColor: 'gray',
+              flex: 1,
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}>
+            <View style={{backgroundColor: 'blue'}}>
+              <Button
+                color={'white'}
+                onPress={handleIncrement}
+                title="Increment +"
+              />
+            </View>
+            <View style={{backgroundColor: 'red'}}>
+              <Button
+                color={'white'}
+                onPress={handleDecrement}
+                title="Decrement -"
+              />
+            </View>
+            <View
+              style={{
+                backgroundColor: 'yellow',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '10%',
+              }}>
+              <Text>{number}</Text>
+            </View>
+          </View>
           <Section title="Step One">My first app</Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
